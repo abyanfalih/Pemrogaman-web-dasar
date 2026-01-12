@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #858796;
+    --success-color: #1cc88a;
+    --info-color: #36b9cc;
+    --warning-color: #f6c23e;
+    --danger-color: #e74a3b;
+    --dark-bg: #f8f9fc;
+    --sidebar-bg: #224abe; /* Gradient base */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-bg);
+    overflow-x: hidden;
+}
+
+/* --- SIDEBAR CUSTOM --- */
+.sidebar {
+    min-height: 100vh;
+    background: linear-gradient(180deg, var(--primary-color) 10%, #224abe 100%);
+    box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link {
+    color: rgba(255,255,255,0.8);
+    font-weight: 500;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover, .sidebar .nav-link.active {
+    color: #fff;
+    background-color: rgba(255,255,255,0.2);
+    transform: translateX(5px);
+}
+
+.sidebar-brand {
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    margin-bottom: 20px;
+}
+
+/* --- CONTENT AREA --- */
+.content-wrapper {
+    padding: 30px;
+}
+
+/* --- CARD STYLING --- */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    margin-bottom: 30px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px); /* Efek melayang sedikit saat hover */
+}
+
+.card-header {
+    background-color: white;
+    border-bottom: 1px solid #e3e6f0;
+    padding: 20px;
+    border-radius: 15px 15px 0 0 !important;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* --- TABLE STYLING --- */
+.table thead th {
+    background-color: #eaecf4;
+    color: #4e73df;
+    border: none;
+    font-weight: 600;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-weight: 500;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+    .sidebar {
+        min-height: auto;
+        padding-bottom: 20px;
+    }
+    
+    .sidebar .nav {
+        flex-direction: row !important;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .sidebar .nav-item {
+        display: inline-block;
+    }
+
+    .sidebar .nav-link {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+    
+    .content-wrapper {
+        padding: 15px;
+    }
+}
