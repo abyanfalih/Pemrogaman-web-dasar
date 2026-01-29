@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #0423ef;
+}
+
+h1, h2 {
+    color: #0606fb;
+}
+
+.profile-img {
+    border: 5px solid #eee;
+    max-width: 200px;
+    height: auto;
+}
+
+footer {
+    border-top: 1px solid #080cf1;
+}
+
+footer ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0.5rem;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.btn-primary:hover {
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+
+footer a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
